@@ -132,8 +132,6 @@ const Forecast = () => {
           ? currentSelected.filter((el) => el !== itemId)
           : currentSelected.concat(itemId)
       );
-      console.log('itemId');
-      console.log(itemId);
       barChartData(allDate.indexOf(itemId));
     };
 //to render the initial barchart on click of card
@@ -162,7 +160,7 @@ const Forecast = () => {
 
   return (
     <div>
-      {loading && <div>loading</div>}
+      {loading && <div className="loading">loading....</div>}
       {!loading && (
         <div>
           <header className="App-header">
